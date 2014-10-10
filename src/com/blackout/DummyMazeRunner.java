@@ -34,7 +34,7 @@ public class DummyMazeRunner {
 
     public void run() throws UnirestException {
         CurrentCell currentCell = startCell;
-        log("String run from cell - " + currentCell);
+        log("Starting run from cell - " + currentCell);
         while(true) {
             Direction direction = decideMove(currentCell);
             if(direction != null) {

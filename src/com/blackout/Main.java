@@ -17,9 +17,9 @@ public class Main {
     }
     
     public static void main(String[] args) throws JSONException, UnirestException, FileNotFoundException, UnsupportedEncodingException {
-        
+        String workingDir = System.getProperty("user.dir");
         for(int i=0; true; i++) {
-            String fileName = String.format("/Users/bgurung/git/BlackMaze/infos/run_%d_info.txt", i); 
+            String fileName = String.format("%s/infos/run_%d_info.txt", workingDir, i); 
             PrintWriter writer = new PrintWriter(fileName, "UTF-8");
             DummyMazeRunner dummy = new DummyMazeRunner(startMaze(), writer);
             dummy.run();
