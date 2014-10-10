@@ -67,7 +67,7 @@ public class DummyMazeRunner {
     private CurrentCell jumpback() throws UnirestException {
         Location loc = jumpbackLocations.pop();
         jumpbacks++;
-        log(String.format("Jumpback %d: Jumped back to location - %s", moves, loc));
+        log(String.format("Jumpback %d: Jumped back to location - %s", jumpbacks, loc));
         return mazeRestClient.postJump(loc.getX(), loc.getY());
     }
     
